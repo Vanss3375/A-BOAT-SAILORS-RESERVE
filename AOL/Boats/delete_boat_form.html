@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Boat</title>
+    <link rel="stylesheet" href="../delete.css">
+    <style>
+            body {
+        background: url('../bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+    <form method="post" action="http://localhost/AOL/Boats/DeleteBoat.php">
+        <h2>Boats Delete Form</h2>
+        <label for="_bid">Boat ID:</label><br>
+        <input type="number" id="_bid" name="_bid"><br>
+        <label for="_bname">Boat Name:</label><br>
+        <input type="text" id="_bname" name="_bname"><br>
+        <label for="color">Boat Color:</label><br>
+        <input type="text" id="_color" name="_color"><br>
+        <input type="submit" value="Submit">
+        <a href="http://localhost/AOL/index_boats.html">Back</a>
+    </form>
+    </div>
+    
+</body>
+</html>

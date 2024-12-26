@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Reserves</title>
+    <link rel="stylesheet" href="../insert.css">
+   <style>
+        body {
+        background: url('../bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+   </style>
+    
+</head>
+<body>
+    <div class="form-box">
+    <form method="post" action="http://localhost/AOL/Reserves/InsertReserves.php">
+        <h2>Reserves Input Form</h2>
+        <label for="_sid">Sailor ID:</label><br>
+        <input type="number" id="_sid" name="_sid" required><br>
+        <label for="_bid">Boat ID:</label><br>
+        <input type="number" id="_bid" name="_bid" required> <br>
+        <label for="_days">Days:</label><br>
+        <input type="date" id="_days" name="_days" required><br><br>
+        <input type="submit" value="Submit">
+        <a href="http://localhost/AOL/index_reserves.html">Back</a>
+    </form>
+    </div>
+   
+</body>
+</html>

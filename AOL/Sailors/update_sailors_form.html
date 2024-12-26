@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Sailors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('../bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        label {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        input[type="submit"],
+        a,
+        input[type="button"] {
+            display: inline-block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+            color: #333;
+        }
+
+        input[type="submit"]:hover,
+        a:hover,
+        input[type="button"]:hover {
+            background-color: #ddd;
+        }
+
+        input[type="submit"] {
+            background-color: #fff;
+        }
+
+        a {
+            background-color: #fff;
+            margin-top: 10px;
+        }
+
+        .back-button {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            margin-bottom: 0px;
+        }
+
+        #updateSection {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-box">
+        <form method="post" action="http://localhost/AOL/Sailors/UpdateSailors.php" id="updateForm">
+            <h2>Sailors Update Form</h2>
+
+            <!-- Select Section -->
+            <div id="selectSection">
+                <h3>Select</h3>
+                <label for="_sid_search">Sailor ID:</label>
+                <input type="number" id="_sid_search" name="_sid_search"><br>
+                <label for="_sname_search">Sailor Name:</label>
+                <input type="text" id="_sname_search" name="_sname_search"><br>
+                <label for="_rating_search">Rating:</label>
+                <input type="number" id="_rating_search" name="_rating_search"><br>
+                <label for="_age_search">Age:</label>
+                <input type="number" id="_age_search" name="_age_search"><br>
+
+                <!-- Button to switch to the Update Section -->
+                <a href="#" onclick="showUpdateSection()" class="back-button">Next </a>
+                <a href="http://localhost/AOL/index_sailors.html" class="back-button">Back</a>
+            </div>
+
+            <!-- Update Section -->
+            <div id="updateSection">
+                <h3>Update</h3>
+                <label for="_sid">Sailor ID:</label><br>
+                <input type="number" id="_sid" name="_sid"><br>
+                <label for="_sname">Sailor Name:</label><br>
+                <input type="text" id="_sname" name="_sname"> <br>
+                <label for="_rating">Rating:</label><br>
+                <input type="number" id="_rating" name="_rating"><br>
+                <label for="_age">Age:</label><br>
+                <input type="number" id="_age" name="_age"><br><br>
+                <input type="submit" value="Submit">
+                <a href="#" onclick="showSelectSection()" class="back-button">Back </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showUpdateSection() {
+            document.getElementById('selectSection').style.display = 'none';
+            document.getElementById('updateSection').style.display = 'block';
+        }
+
+        function showSelectSection() {
+            document.getElementById('updateSection').style.display = 'none';
+            document.getElementById('selectSection').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

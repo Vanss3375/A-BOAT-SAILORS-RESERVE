@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Boat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('../bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        label {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        input {
+            width: calc(100% - 20px); /* Adjusted width to consider padding */
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        input[type="submit"], a, input[type="button"] {
+            display: inline-block;
+            width: calc(100% - 20px); /* Adjusted width to consider padding */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+            color: #333;
+        }
+
+        input[type="submit"]:hover, a:hover, input[type="button"]:hover {
+            background-color: #ddd;
+        }
+
+        input[type="submit"] {
+            background-color: #fff;
+            
+        }
+       
+        a {
+            background-color: #fff;
+            margin-top: 10px;
+        }
+
+        .back-button {
+            margin-top: 10px;
+        }
+        input[type="submit"]{
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <form method="post" action="http://localhost/AOL/Boats/UpdateBoat.php" id="updateForm">
+            <h2>Boats Update Form</h2>
+            
+            <!-- Select Section -->
+            <div id="selectSection">
+                <h3>Select</h3>
+                <label for="_bid_search">Boat ID:</label>
+                <input type="number" id="_bid_search" name="_bid_search"><br>
+                <label for="_bname_search">Boat Name:</label>
+                <input type="text" id="_bname_search" name="_bname_search"><br>
+                <label for="_bcolor_search">Boat Color:</label>
+                <input type="text" id="_color_search" name="_color_search"><br>
+                
+                <!-- Button to switch to the Update Section -->
+                <a href="#" onclick="showUpdateSection()" class="back-button">Next </a>
+                <a href="http://localhost/AOL/index_boats.html" class="back-button">Back</a>
+            </div>
+
+            <!-- Update Section -->
+            <div id="updateSection" style="display: none;">
+                <h3>Update</h3>
+                <label for="_bid">Boat ID:</label><br>
+                <input type="number" id="_bid" name="_bid"><br>
+                <label for="_bname">Boat Name:</label><br>
+                <input type="text" id="_bname" name="_bname"> <br>
+                <label for="_color">Color:</label><br>
+                <input type="text" id="_color" name="_color"><br><br>
+                <input type="submit" value="Submit">
+                <a href="#" onclick="showSelectSection()" class="back-button">Back </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showUpdateSection() {
+            document.getElementById('selectSection').style.display = 'none';
+            document.getElementById('updateSection').style.display = 'block';
+        }
+
+        function showSelectSection() {
+            document.getElementById('updateSection').style.display = 'none';
+            document.getElementById('selectSection').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

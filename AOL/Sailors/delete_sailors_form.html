@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Sailors</title>
+    <link rel="stylesheet" href="../delete.css">
+    <style>
+    body {
+        background: url('../bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="form-box">
+    <form method="post" action="http://localhost/AOL/Sailors/DeleteSailors.php">
+        <h2>Sailors Delete Form</h2>
+        <label for="_sid">Sailor ID:</label><br>
+        <input type="number" id="_sid" name="_sid"><br>
+        <label for="_sname">Sailor Name:</label><br>
+        <input type="text" id="_sname" name="_sname"><br>
+        <label for="_rating">Rating:</label><br>
+        <input type="number" id="_rating" name="_rating"><br>
+        <label for="_age">Age:</label><br>
+        <input type="number" id="_age" name="_age"><br>
+        <input type="submit" value="Submit">
+        <a href="http://localhost/AOL/index_Sailors.html">Back</a>
+    </form>
+    </div>
+    
+</body>
+</html>

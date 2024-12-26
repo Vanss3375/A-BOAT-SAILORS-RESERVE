@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Boat</title>
+    <link rel="stylesheet" href="../insert.css">
+    <style>
+        body {
+        background: url('../bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <form id="boatForm" method="post" action="http://localhost/AOL/Boats/InsertBoat.php">
+                <h2>Boats Input Form</h2>
+        
+                <label for="_bid">Boat ID:</label>
+                <input type="number" id="_bid" name="_bid" required>
+
+                <label for="_bname">Boat Name:</label>
+                <input type="text" id="_bname" name="_bname" required>
+
+                <label for="_color">Color:</label>
+                <input type="text" id="_color" name="_color" required>
+
+                <input type="submit" value="Submit">
+                <a href="http://localhost/AOL/index_boats.html" class="back-button">Back</a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
