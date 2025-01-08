@@ -19,5 +19,5 @@ In this database project, we create a database management mechanism related to b
  - add / remove / see some data of the sailors, reserve and rent boat 
  - can see result of the data 
 
-# preview : 
+# preview link video demo aplikasi: 
 https://drive.google.com/drive/folders/1fZHbflpVfW9Y_59NaSUZFrWIuSFBJ7oK?usp=drive_link
