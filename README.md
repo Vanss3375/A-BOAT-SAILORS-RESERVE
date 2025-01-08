@@ -17,7 +17,12 @@ In this database project, we create a database management mechanism related to b
 
 # Feature :
  - add / remove / see some data of the sailors, reserve and rent boat 
- - can see result of the data 
+ - can see result of the data
+
+# lampiran gambar : 
+![lamoiran menu](AOL/IMG_20250106_181553.jpg)
+
+![lampiran menu](AOL/IMG_20250108_020949.jpg)
 
 # preview link video demo aplikasi: 
 https://drive.google.com/drive/folders/1fZHbflpVfW9Y_59NaSUZFrWIuSFBJ7oK?usp=drive_link
