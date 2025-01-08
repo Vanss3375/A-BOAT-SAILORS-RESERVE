@@ -24,5 +24,7 @@ In this database project, we create a database management mechanism related to b
 
 ![lampiran menu](AOL/IMG_20250108_020949.jpg)
 
+![input data](AOL/1736315631548.jpg)
+
 # preview link video demo aplikasi: 
 https://drive.google.com/drive/folders/1fZHbflpVfW9Y_59NaSUZFrWIuSFBJ7oK?usp=drive_link
